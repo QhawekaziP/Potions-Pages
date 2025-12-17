@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="style.css" rel="stylesheet">
+<title>Potions & Pages</title>
+</head>
+
+<body>
+    <header>
+        <h1>✨ Potions & Pages ✨</h1>
+        <img src="img/cozy.png" class="cozy"><h2><em>Where stories brew and magic happens</em></h2>
+        
+        <nav>
+      <a href="index.html">Home</a>
+      <a href="AboutUs.html">About</a>
+      <a href="menu.html">Potions</a>
+      <a href="books.html">Pages</a>
+      <a href="#events">Events</a>
+    </header>
+
+<div class="hero">
+    <h2>Step Inside the Magic</h2>
+    <p>A cozy enchanted space for dreamers, readers, and potion-sippers.</p>
+    <img src="img/coffee.png" alt="a book with flying letters">
+</div>
+
+<section class="section" id="about">
+    <h2>About Us</h2>
+    <p>
+        Potions & Pages is a whimsical bookshop and coffeeshop where magic lives in every corner.
+        From spell-like lattes to shelves filled with fantastical tales, our shop is crafted for
+        those who love stories, warmth, and wonder.
+    </p>
+</section>
+
+<section class="section" id="menu">
+    <h2>Our Potions (Menu)</h2>
+    <ul>
+        <li><strong>Fairy Dust Latte</strong> – Sweet, sparkly, and enchanting.</li>
+        <li><strong>Moonbeam Mocha</strong> – Dark chocolate magic.</li>
+        <li><strong>Witch’s Brew Coffee</strong> – Bold and spellbinding.</li>
+        <li><strong>Enchanted Herbal Teas</strong> – Blends inspired by folklore.</li>
+    </ul>
+</section>
+
+<section class="section" id="books">
+    <h2>Pages (Books)</h2>
+    <p>Explore our curated collection of fantasy, classics, indie authors, and magical literature.</p>
+    <ul>
+        <li>New Arrivals</li>
+        <li>Staff Picks</li>
+        <li>Local Author Shelf</li>
+        <li>Young Readers Corner</li>
+    </ul>
+</section>
+
+<section class="section" id="events">
+    <h2>Events & Community</h2>
+    <ul>
+        <li>✨ Weekly Book Club</li>
+        <li>🧙‍♂️ Fantasy-Themed Open Mic Night</li>
+        <li>📖 Storytime Sundays</li>
+        <li>📝 Writers’ Workshops</li>
+    </ul>
+</section>
+
+<section class="section" id="visit">
+    <img src="img/designer.png" alt="shop illustration" class="shop">
+    <h2>Visit Us</h2>
+    <p>Visit us or follow us on our social media pages!</p>
+    <p><strong>Address:</strong> 123 Enchanted Lane, Storybrook</p>
+    <p><strong>Hours:</strong> Mon–Sun: 8 AM – 8 PM</p>
+    <p><strong>Email:</strong> contact@potionsandpages.com</p>
+    <p><strong>X:</strong> <a href="https://x.com/">Follow us</a></p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/">@potionsandpages</a></p>
+    <p><strong>Facebook:</strong> <a href="https://facebook.com/">Potions & Pages</a></p>
+</section>
+
+<footer>
+    <p>© 2025 Potions & Pages — Brewing Magic Daily</p>
+</footer>
+<script>
+// Sparkle effect on hover
+document.querySelectorAll('nav a, .menu-list li').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    const sparkle = document.createElement('span');
+    sparkle.classList.add('sparkle');
+    el.appendChild(sparkle);
+
+    // Remove sparkle after animation
+    setTimeout(() => {
+      sparkle.remove();
+    }, 1000);
+  });
+});
+
+// Steam effect for coffee image
+const coffeeImg = document.querySelector('.hero img');
+if (coffeeImg) {
+  for (let i = 0; i < 5; i++) {
+    const steam = document.createElement('span');
+    steam.classList.add('steam');
+    coffeeImg.parentElement.appendChild(steam);
+  }
+}
+// Floating stars background
+function createStars(count = 50) {
+  const body = document.body;
+  for (let i = 0; i < count; i++) {
+    const star = document.createElement('span');
+    star.classList.add('star');
+    star.style.left = Math.random() * window.innerWidth + 'px';
+    star.style.top = Math.random() * window.innerHeight + 'px';
+    star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+    body.appendChild(star);
+  }
+}
+
+createStars();
+</script>
+</body>
+</html>

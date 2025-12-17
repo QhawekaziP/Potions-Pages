@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <title>About Us | Potions & Pages</title>
+</head>
+<body>
+  <header>
+    <h1>✨ Potions & Pages ✨</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="AboutUs.html">About</a>
+      <a href="menu.html">Potions</a>
+      <a href="books.html">Pages</a>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h2>About Us</h2>
+    <p>
+      Potions & Pages is a whimsical bookshop and coffeeshop where magic lives in every corner.
+      From spell-like lattes to shelves filled with fantastical tales, our shop is crafted for
+      those who love stories, warmth, and wonder. Potions & page3s is more than just a bookshop,
+     it is a home and safe haven for those who love to lose themselves in a good book while sipping on
+      a magical brew. it is a place where the ordinary transforms into the extraordinary. 
+      It is a place where creativity,animation and imagination take flight.
+      Prepare to lose yourself in a world where every sip
+      and every page turns into an enchanting experience.
+    </p>
+    <img src="img/cozy.png" alt="Cozy magical shop illustration"class="cozy">
+  </main>
+
+  <footer>
+    <p>© 2025 Potions & Pages — Brewing Magic Daily</p>
+  </footer>
+  <script>// Sparkle effect on hover
+document.querySelectorAll('nav a, .menu-list li').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    const sparkle = document.createElement('span');
+    sparkle.classList.add('sparkle');
+    el.appendChild(sparkle);
+
+    // Remove sparkle after animation
+    setTimeout(() => {
+      sparkle.remove();
+    }, 1000);
+  });
+});
+
+// Steam effect for coffee image
+const coffeeImg = document.querySelector('.hero img');
+if (coffeeImg) {
+  for (let i = 0; i < 5; i++) {
+    const steam = document.createElement('span');
+    steam.classList.add('steam');
+    coffeeImg.parentElement.appendChild(steam);
+  }
+}
+// Floating stars background
+function createStars(count = 50) {
+  const body = document.body;
+  for (let i = 0; i < count; i++) {
+    const star = document.createElement('span');
+    star.classList.add('star');
+    star.style.left = Math.random() * window.innerWidth + 'px';
+    star.style.top = Math.random() * window.innerHeight + 'px';
+    star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+    body.appendChild(star);
+  }
+}
+
+createStars();
+</script>
+</body>
+</html>
